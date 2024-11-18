@@ -10,6 +10,7 @@ import org.mapstruct.Mappings;
 import java.util.List;
 
 @Mapper(componentModel = "spring", uses = {CategoryMapper.class})
+@SuppressWarnings("unused")
 public interface ProductMapper {
 
     @Mappings({

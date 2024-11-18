@@ -8,6 +8,7 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
 @Mapper(componentModel = "spring")
+@SuppressWarnings("unused")
 public interface CategoryMapper {
 
     @Mappings({
@@ -18,7 +19,6 @@ public interface CategoryMapper {
     CategoryDTO toCategoryDTO(Category category);
 
     @InheritInverseConfiguration
-    @Mapping(target = "products", ignore = true)
     Category toCategory(CategoryDTO categoryDTO);
 
 }
